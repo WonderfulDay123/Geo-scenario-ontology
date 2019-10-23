@@ -18,12 +18,8 @@
     <Prefix name="swrlb" IRI="http://www.w3.org/2003/11/swrlb#"/>
     <Prefix name="untitled-ontology-4" IRI="http://www.semanticweb.org/yxh180053/ontologies/2019/2/untitled-ontology-4#"/>
     <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/affiliation"/>
-        <Literal>Nanjing Normal University, The University of Texas at Dallas</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <Literal xml:lang="en">Yi Huang, May Yuan</Literal>
+        <Literal xml:lang="en">Yi Huang; May Yuan</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
@@ -105,12 +101,6 @@
         <Class IRI="#Country"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Currency"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#CurrentEra"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Density"/>
     </Declaration>
     <Declaration>
@@ -124,6 +114,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#District"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dynasty"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Event"/>
@@ -168,9 +161,6 @@
         <Class IRI="#HeatStability"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#HistEra"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#HumanPhen"/>
     </Declaration>
     <Declaration>
@@ -211,9 +201,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Lake"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Length"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Line"/>
@@ -423,9 +410,6 @@
         <Class IRI="#Weather_phenomenon"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Weight"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Wetland"/>
     </Declaration>
     <Declaration>
@@ -442,6 +426,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="#interactRelation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#partOfCity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#partOfDistrict"/>
     </Declaration>
     <Declaration>
         <Class IRI="#semanticRelation"/>
@@ -478,9 +468,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#Fall"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#HistEra"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#Infiltrate"/>
@@ -535,9 +522,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#contain"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#containedIn"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#corrosion"/>
@@ -630,6 +614,9 @@
         <ObjectProperty IRI="#isComposedOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isContainedIn"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isDependOn"/>
     </Declaration>
     <Declaration>
@@ -651,7 +638,16 @@
         <ObjectProperty IRI="#isInheritFrom"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isKindOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLocateIn"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isOrigniate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPartOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isParticipateIn"/>
@@ -664,9 +660,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isTriggeredBy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#locateIn"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#northEastTo"/>
@@ -912,13 +905,13 @@
         <NamedIndividual IRI="#Yangzhou"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Yuan"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Yuhuatai"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Zhenjiang"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/affiliation"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -941,6 +934,27 @@
     <Declaration>
         <AnnotationProperty IRI="#&apos;example_of_usage&apos;"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Dynasty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#histState"/>
+            <Class IRI="#Country"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#partOfCity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isContainedIn"/>
+            <Class IRI="#City"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#partOfDistrict"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isContainedIn"/>
+            <Class IRI="#District"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Acidity"/>
         <Class IRI="#CheAttr"/>
@@ -1018,6 +1032,13 @@
         <Class IRI="#Province"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#City"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isContainedIn"/>
+            <Class IRI="#Province"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Clip"/>
         <Class IRI="#Overlay"/>
     </SubClassOf>
@@ -1039,14 +1060,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Country"/>
-        <Class IRI="#CurrentEra"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Currency"/>
-        <Class IRI="#Unit"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CurrentEra"/>
         <Class IRI="#AdminDivision"/>
     </SubClassOf>
     <SubClassOf>
@@ -1070,8 +1083,26 @@
         <Class IRI="#City"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#District"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isContainedIn"/>
+            <Class IRI="#City"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dynasty"/>
+        <Class IRI="#AdminDivision"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Event"/>
         <Class IRI="#Geo-scenario"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#isLocateIn"/>
+            <Class IRI="#Geo-scenario"/>
+        </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Flammability"/>
@@ -1080,6 +1111,13 @@
     <SubClassOf>
         <Class IRI="#Gas"/>
         <Class IRI="#State"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Geo-scenario"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isContainedIn"/>
+            <Class IRI="#Geo-scenario"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Geological_event"/>
@@ -1112,10 +1150,6 @@
     <SubClassOf>
         <Class IRI="#HeatStability"/>
         <Class IRI="#CheAttr"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#HistEra"/>
-        <Class IRI="#AdminDivision"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#HumanPhen"/>
@@ -1172,10 +1206,6 @@
     <SubClassOf>
         <Class IRI="#Lake"/>
         <Class IRI="#Hydrology"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Length"/>
-        <Class IRI="#Unit"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Line"/>
@@ -1262,8 +1292,22 @@
         <Class IRI="#Geo-scenario"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#People"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#isLocateIn"/>
+            <Class IRI="#Geo-scenario"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Phenomenon"/>
         <Class IRI="#Geo-scenario"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Phenomenon"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#isLocateIn"/>
+            <Class IRI="#Geo-scenario"/>
+        </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PhyAttr"/>
@@ -1312,6 +1356,13 @@
     <SubClassOf>
         <Class IRI="#Province"/>
         <Class IRI="#Country"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Province"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isContainedIn"/>
+            <Class IRI="#Country"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Reductibility"/>
@@ -1414,6 +1465,13 @@
         <Class IRI="#Geo-scenario"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Thing"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#isLocateIn"/>
+            <Class IRI="#Geo-scenario"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Time_Reference_System"/>
         <Class IRI="#Temporal_Information"/>
     </SubClassOf>
@@ -1450,10 +1508,6 @@
         <Class IRI="#NaturalPhen"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Weight"/>
-        <Class IRI="#Unit"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Wetland"/>
         <Class IRI="#OtherHydro"/>
     </SubClassOf>
@@ -1476,6 +1530,14 @@
     <SubClassOf>
         <Class IRI="#interactRelation"/>
         <Class IRI="#Relational_information"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#partOfCity"/>
+        <Class IRI="#AdminDivision"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#partOfDistrict"/>
+        <Class IRI="#AdminDivision"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#semanticRelation"/>
@@ -1548,9 +1610,27 @@
         <Class IRI="#Other_event"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#Atmosphere"/>
+        <Class IRI="#Biology"/>
+        <Class IRI="#Constructed_thing"/>
+        <Class IRI="#Geology"/>
+        <Class IRI="#Hydrology"/>
+        <Class IRI="#Other"/>
+        <Class IRI="#Soil"/>
+        <Class IRI="#Topography"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#Capacity"/>
         <Class IRI="#Population"/>
         <Class IRI="#hasGDP"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#City"/>
+        <Class IRI="#Country"/>
+        <Class IRI="#Dynasty"/>
+        <Class IRI="#Province"/>
+        <Class IRI="#partOfCity"/>
+        <Class IRI="#partOfDistrict"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Clip"/>
@@ -1584,11 +1664,6 @@
         <Class IRI="#Spatial_Extent"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Currency"/>
-        <Class IRI="#Length"/>
-        <Class IRI="#Weight"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#Gas"/>
         <Class IRI="#Liquid"/>
         <Class IRI="#Solid"/>
@@ -1615,11 +1690,6 @@
         <Class IRI="#Human_Physical_Scenario"/>
         <Class IRI="#Human_Scenario"/>
         <Class IRI="#Physical_Scenario"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Infrastructure"/>
-        <Class IRI="#Pipeline"/>
-        <Class IRI="#Transportation"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Instant"/>
@@ -1657,11 +1727,23 @@
         <NamedIndividual IRI="#Changzhou"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
+        <NamedIndividual IRI="#Changzhou"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#District"/>
         <NamedIndividual IRI="#Gaochun"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
+        <NamedIndividual IRI="#Gaochun"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#District"/>
+        <NamedIndividual IRI="#Gulou"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
         <NamedIndividual IRI="#Gulou"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1670,6 +1752,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#City"/>
+        <NamedIndividual IRI="#Huaian"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
         <NamedIndividual IRI="#Huaian"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1685,11 +1771,19 @@
         <NamedIndividual IRI="#Jiangning"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
+        <NamedIndividual IRI="#Jiangning"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Province"/>
         <NamedIndividual IRI="#Jiangsu"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#District"/>
+        <NamedIndividual IRI="#Jianye"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
         <NamedIndividual IRI="#Jianye"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1705,7 +1799,15 @@
         <NamedIndividual IRI="#Lianyungang"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
+        <NamedIndividual IRI="#Lianyungang"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#District"/>
+        <NamedIndividual IRI="#Lishui"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
         <NamedIndividual IRI="#Lishui"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1713,7 +1815,11 @@
         <NamedIndividual IRI="#Lvhe"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#HistEra"/>
+        <Class IRI="#Geo-scenario"/>
+        <NamedIndividual IRI="#Lvhe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dynasty"/>
         <NamedIndividual IRI="#Ming_Dynasty"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1725,7 +1831,15 @@
         <NamedIndividual IRI="#Nanjing"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#City"/>
+        <NamedIndividual IRI="#Nantong"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
         <NamedIndividual IRI="#Nantong"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1749,15 +1863,19 @@
         <NamedIndividual IRI="#Pukou"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
+        <NamedIndividual IRI="#Pukou"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Infrastructure"/>
         <NamedIndividual IRI="#Puppet_Gov_Off"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#HistEra"/>
+        <Class IRI="#Dynasty"/>
         <NamedIndividual IRI="#Puppet_Regime"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#HistEra"/>
+        <Class IRI="#Dynasty"/>
         <NamedIndividual IRI="#Qing_Dynasty"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1765,11 +1883,19 @@
         <NamedIndividual IRI="#Qinhuai"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
+        <NamedIndividual IRI="#Qinhuai"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#District"/>
         <NamedIndividual IRI="#Qixia"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#HistEra"/>
+        <Class IRI="#Geo-scenario"/>
+        <NamedIndividual IRI="#Qixia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dynasty"/>
         <NamedIndividual IRI="#Republic_of_China"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1777,7 +1903,15 @@
         <NamedIndividual IRI="#Suqian"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
+        <NamedIndividual IRI="#Suqian"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#City"/>
+        <NamedIndividual IRI="#Suzhou"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
         <NamedIndividual IRI="#Suzhou"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1785,7 +1919,7 @@
         <NamedIndividual IRI="#TW_Palace"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#HistEra"/>
+        <Class IRI="#Dynasty"/>
         <NamedIndividual IRI="#Taiping_Dynasty"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1793,7 +1927,15 @@
         <NamedIndividual IRI="#Taizhou"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
+        <NamedIndividual IRI="#Taizhou"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#City"/>
+        <NamedIndividual IRI="#Wuxi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
         <NamedIndividual IRI="#Wuxi"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1801,7 +1943,15 @@
         <NamedIndividual IRI="#Xuanwu"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
+        <NamedIndividual IRI="#Xuanwu"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#City"/>
+        <NamedIndividual IRI="#Xuzhou"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
         <NamedIndividual IRI="#Xuzhou"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1809,15 +1959,35 @@
         <NamedIndividual IRI="#Yancheng"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
+        <NamedIndividual IRI="#Yancheng"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#City"/>
         <NamedIndividual IRI="#Yangzhou"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
+        <NamedIndividual IRI="#Yangzhou"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#Yuan"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#District"/>
         <NamedIndividual IRI="#Yuhuatai"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
+        <NamedIndividual IRI="#Yuhuatai"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#City"/>
+        <NamedIndividual IRI="#Zhenjiang"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Geo-scenario"/>
         <NamedIndividual IRI="#Zhenjiang"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
@@ -1851,6 +2021,16 @@
         <NamedIndividual IRI="#NJPPA"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#Han_Palace"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#Han_Palace"/>
+        <NamedIndividual IRI="#Xuanwu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#northWestTo"/>
         <NamedIndividual IRI="#Huaian"/>
         <NamedIndividual IRI="#Yangzhou"/>
@@ -1881,6 +2061,16 @@
         <NamedIndividual IRI="#NJPPA"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#JN_Gov_Off"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#JN_Gov_Off"/>
+        <NamedIndividual IRI="#Xuanwu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasOwner"/>
         <NamedIndividual IRI="#JS_Gov_Off"/>
         <NamedIndividual IRI="#P.R._China"/>
@@ -1891,6 +2081,16 @@
         <NamedIndividual IRI="#NJPPA"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#JS_Gov_Off"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#JS_Gov_Off"/>
+        <NamedIndividual IRI="#Xuanwu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasOwner"/>
         <NamedIndividual IRI="#LJ_Gov_Off"/>
         <NamedIndividual IRI="#Qing_Dynasty"/>
@@ -1901,6 +2101,16 @@
         <NamedIndividual IRI="#NJPPA"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#LJ_Gov_Off"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#LJ_Gov_Off"/>
+        <NamedIndividual IRI="#Xuanwu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasOwner"/>
         <NamedIndividual IRI="#LJ_Gov_Palace"/>
         <NamedIndividual IRI="#Qing_Dynasty"/>
@@ -1909,6 +2119,16 @@
         <ObjectProperty IRI="#histState"/>
         <NamedIndividual IRI="#LJ_Gov_Palace"/>
         <NamedIndividual IRI="#NJPPA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#LJ_Gov_Palace"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#LJ_Gov_Palace"/>
+        <NamedIndividual IRI="#Xuanwu"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#eastTo"/>
@@ -1931,9 +2151,24 @@
         <NamedIndividual IRI="#Yancheng"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isRelateTo"/>
+        <NamedIndividual IRI="#Ming_Dynasty"/>
+        <NamedIndividual IRI="#P.R._China"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasOwner"/>
         <NamedIndividual IRI="#NJPPA"/>
         <NamedIndividual IRI="#P.R._China"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#NJPPA"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#NJPPA"/>
+        <NamedIndividual IRI="#Xuanwu"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#contain"/>
@@ -1996,6 +2231,11 @@
         <NamedIndividual IRI="#Yuhuatai"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isContainedIn"/>
+        <NamedIndividual IRI="#Nanjing"/>
+        <NamedIndividual IRI="#Jiangsu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#northWestTo"/>
         <NamedIndividual IRI="#Nanjing"/>
         <NamedIndividual IRI="#Changzhou"/>
@@ -2061,6 +2301,16 @@
         <NamedIndividual IRI="#NJPPA"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#Ntl_Gov_Off"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#Ntl_Gov_Off"/>
+        <NamedIndividual IRI="#Xuanwu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasOwner"/>
         <NamedIndividual IRI="#Palace_Ruins"/>
         <NamedIndividual IRI="#Qing_Dynasty"/>
@@ -2069,6 +2319,16 @@
         <ObjectProperty IRI="#histState"/>
         <NamedIndividual IRI="#Palace_Ruins"/>
         <NamedIndividual IRI="#NJPPA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#Palace_Ruins"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#Palace_Ruins"/>
+        <NamedIndividual IRI="#Xuanwu"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasOwner"/>
@@ -2081,6 +2341,16 @@
         <NamedIndividual IRI="#NJPPA"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#Pres_Palace"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#Pres_Palace"/>
+        <NamedIndividual IRI="#Xuanwu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasOwner"/>
         <NamedIndividual IRI="#Puppet_Gov_Off"/>
         <NamedIndividual IRI="#Puppet_Regime"/>
@@ -2089,6 +2359,21 @@
         <ObjectProperty IRI="#histState"/>
         <NamedIndividual IRI="#Puppet_Gov_Off"/>
         <NamedIndividual IRI="#NJPPA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#Puppet_Gov_Off"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#Puppet_Gov_Off"/>
+        <NamedIndividual IRI="#Xuanwu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isRelateTo"/>
+        <NamedIndividual IRI="#Puppet_Regime"/>
+        <NamedIndividual IRI="#P.R._China"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#northWestTo"/>
@@ -2129,6 +2414,16 @@
         <ObjectProperty IRI="#histState"/>
         <NamedIndividual IRI="#TW_Palace"/>
         <NamedIndividual IRI="#NJPPA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#TW_Palace"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <NamedIndividual IRI="#TW_Palace"/>
+        <NamedIndividual IRI="#Xuanwu"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#northEastTo"/>
@@ -2176,59 +2471,9 @@
         <NamedIndividual IRI="#Suzhou"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#contain"/>
+        <ObjectProperty IRI="#isContainedIn"/>
         <NamedIndividual IRI="#Xuanwu"/>
-        <NamedIndividual IRI="#Han_Palace"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#contain"/>
-        <NamedIndividual IRI="#Xuanwu"/>
-        <NamedIndividual IRI="#JN_Gov_Off"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#contain"/>
-        <NamedIndividual IRI="#Xuanwu"/>
-        <NamedIndividual IRI="#JS_Gov_Off"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#contain"/>
-        <NamedIndividual IRI="#Xuanwu"/>
-        <NamedIndividual IRI="#LJ_Gov_Off"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#contain"/>
-        <NamedIndividual IRI="#Xuanwu"/>
-        <NamedIndividual IRI="#LJ_Gov_Palace"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#contain"/>
-        <NamedIndividual IRI="#Xuanwu"/>
-        <NamedIndividual IRI="#NJPPA"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#contain"/>
-        <NamedIndividual IRI="#Xuanwu"/>
-        <NamedIndividual IRI="#Ntl_Gov_Off"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#contain"/>
-        <NamedIndividual IRI="#Xuanwu"/>
-        <NamedIndividual IRI="#Palace_Ruins"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#contain"/>
-        <NamedIndividual IRI="#Xuanwu"/>
-        <NamedIndividual IRI="#Pres_Palace"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#contain"/>
-        <NamedIndividual IRI="#Xuanwu"/>
-        <NamedIndividual IRI="#Puppet_Gov_Off"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#contain"/>
-        <NamedIndividual IRI="#Xuanwu"/>
-        <NamedIndividual IRI="#TW_Palace"/>
+        <NamedIndividual IRI="#Nanjing"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#northWestTo"/>
@@ -2316,16 +2561,6 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">320400</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hasGDP"/>
-        <NamedIndividual IRI="#Changzhou"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">0.71 tn</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasPopulation"/>
-        <NamedIndividual IRI="#Changzhou"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">4.72 mn</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#hasInteract"/>
         <NamedIndividual IRI="#Han_Palace"/>
         <Literal>Construct</Literal>
@@ -2339,16 +2574,6 @@
         <DataProperty IRI="#hasCityCode"/>
         <NamedIndividual IRI="#Huaian"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">320800</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasGDP"/>
-        <NamedIndividual IRI="#Huaian"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">0.36 tn</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasPopulation"/>
-        <NamedIndividual IRI="#Huaian"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">4.93 mn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasInteract"/>
@@ -2396,16 +2621,6 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">320700</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hasGDP"/>
-        <NamedIndividual IRI="#Lianyungang"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">0.28 tn</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasPopulation"/>
-        <NamedIndividual IRI="#Lianyungang"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">4.52 mn</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#hasInteract"/>
         <NamedIndividual IRI="#NJPPA"/>
         <Literal>Renovate</Literal>
@@ -2423,27 +2638,17 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasGDP"/>
         <NamedIndividual IRI="#Nanjing"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">1.28 tn</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.28</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasPopulation"/>
         <NamedIndividual IRI="#Nanjing"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">8.43 mn</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">8.43</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasCityCode"/>
         <NamedIndividual IRI="#Nantong"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">320600</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasGDP"/>
-        <NamedIndividual IRI="#Nantong"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">0.84 tn</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasPopulation"/>
-        <NamedIndividual IRI="#Nantong"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">7.31 mn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasInteract"/>
@@ -2491,29 +2696,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">321300</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hasPopulation"/>
-        <NamedIndividual IRI="#Suqian"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">0.28 tn</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasPopulation"/>
-        <NamedIndividual IRI="#Suqian"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">4.92 mn</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#hasCityCode"/>
         <NamedIndividual IRI="#Suzhou"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">320500</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasGDP"/>
-        <NamedIndividual IRI="#Suzhou"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">1.86 tn</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasPopulation"/>
-        <NamedIndividual IRI="#Suzhou"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">10.7 mn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasInteract"/>
@@ -2531,29 +2716,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">321200</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hasGDP"/>
-        <NamedIndividual IRI="#Taizhou"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">0.51 tn</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasPopulation"/>
-        <NamedIndividual IRI="#Taizhou"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">4.63 mn</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#hasCityCode"/>
         <NamedIndividual IRI="#Wuxi"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">320200</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasGDP"/>
-        <NamedIndividual IRI="#Wuxi"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">1.14 tn</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasPopulation"/>
-        <NamedIndividual IRI="#Wuxi"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">6.57 mn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasCityCode"/>
@@ -2561,29 +2726,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">320300</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hasGDP"/>
-        <NamedIndividual IRI="#Xuzhou"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">0.68 tn</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasPopulation"/>
-        <NamedIndividual IRI="#Xuzhou"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">8.80 mn</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#hasCityCode"/>
         <NamedIndividual IRI="#Yancheng"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">320900</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasGDP"/>
-        <NamedIndividual IRI="#Yancheng"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">0.55 tn</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasPopulation"/>
-        <NamedIndividual IRI="#Yancheng"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">7.20 mn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasCityCode"/>
@@ -2591,30 +2736,14 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">321000</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hasGDP"/>
-        <NamedIndividual IRI="#Yangzhou"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">0.55 tn</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasPopulation"/>
-        <NamedIndividual IRI="#Yangzhou"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">4.53 mn</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#hasCityCode"/>
         <NamedIndividual IRI="#Zhenjiang"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">321100</Literal>
     </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasGDP"/>
-        <NamedIndividual IRI="#Zhenjiang"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">0.41 tn</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasPopulation"/>
-        <NamedIndividual IRI="#Zhenjiang"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">3.20 mn</Literal>
-    </DataPropertyAssertion>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="#isContainedIn"/>
+        <ObjectProperty IRI="#isPartOf"/>
+    </EquivalentObjectProperties>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#Bio_interact"/>
         <ObjectProperty IRI="#Interaction"/>
@@ -2642,10 +2771,6 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#Fall"/>
         <ObjectProperty IRI="#Phy_interact"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#HistEra"/>
-        <ObjectProperty IRI="#Semantic_Relation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#Infiltrate"/>
@@ -2717,10 +2842,6 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#contain"/>
-        <ObjectProperty IRI="#Semantic_Relation"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#containedIn"/>
         <ObjectProperty IRI="#Semantic_Relation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -2844,6 +2965,10 @@
         <ObjectProperty IRI="#Semantic_Relation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isContainedIn"/>
+        <ObjectProperty IRI="#Semantic_Relation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#isDependOn"/>
         <ObjectProperty IRI="#Semantic_Relation"/>
     </SubObjectPropertyOf>
@@ -2872,7 +2997,19 @@
         <ObjectProperty IRI="#Semantic_Relation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isKindOf"/>
+        <ObjectProperty IRI="#Semantic_Relation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <ObjectProperty IRI="#Semantic_Relation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#isOrigniate"/>
+        <ObjectProperty IRI="#Semantic_Relation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isPartOf"/>
         <ObjectProperty IRI="#Semantic_Relation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -2890,10 +3027,6 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#isTriggeredBy"/>
         <ObjectProperty IRI="#Causal_Relation"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#locateIn"/>
-        <ObjectProperty IRI="#Semantic_Relation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#northEastTo"/>
@@ -3013,7 +3146,7 @@
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#contain"/>
-        <ObjectProperty IRI="#containedIn"/>
+        <ObjectProperty IRI="#isContainedIn"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#downTo"/>
@@ -3082,8 +3215,20 @@
     <SymmetricObjectProperty>
         <ObjectProperty IRI="#s_Touch"/>
     </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#contain"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isContainedIn"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isKindOf"/>
+    </AsymmetricObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#Topology"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasOwner"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#isEqualTo"/>
@@ -3093,16 +3238,24 @@
         <Class IRI="#Geo-scenario"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasGeometry"/>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isLocateIn"/>
         <Class IRI="#Geo-scenario"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasLocation"/>
-        <Class IRI="#Geo-scenario"/>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <Class IRI="#People"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#locateIn"/>
-        <Class IRI="#Geo-scenario"/>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <Class IRI="#Phenomenon"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <Class IRI="#Thing"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#contain"/>
@@ -3123,6 +3276,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#contain"/>
         <Class IRI="#Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isLocateIn"/>
+        <Class IRI="#Geo-scenario"/>
     </ObjectPropertyRange>
     <DisjointObjectProperties>
         <ObjectProperty IRI="#Qualitative"/>
@@ -3264,21 +3421,21 @@
                 <Variable IRI="#x"/>
             </ClassAtom>
             <ObjectPropertyAtom>
-                <ObjectProperty IRI="#contain"/>
-                <Variable IRI="#y"/>
+                <ObjectProperty IRI="#isLocateIn"/>
                 <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
             </ObjectPropertyAtom>
             <ObjectPropertyAtom>
-                <ObjectProperty IRI="#contain"/>
-                <Variable IRI="#z"/>
+                <ObjectProperty IRI="#isContainedIn"/>
                 <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
             </ObjectPropertyAtom>
         </Body>
         <Head>
             <ObjectPropertyAtom>
-                <ObjectProperty IRI="#contain"/>
-                <Variable IRI="#z"/>
+                <ObjectProperty IRI="#isLocateIn"/>
                 <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
             </ObjectPropertyAtom>
         </Head>
     </DLSafeRule>
@@ -3296,19 +3453,19 @@
             <Literal>rule2</Literal>
         </Annotation>
         <Body>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#contain"/>
-                <Variable IRI="#z"/>
-                <Variable IRI="#x"/>
-            </ObjectPropertyAtom>
             <ClassAtom>
-                <Class IRI="#HistEra"/>
+                <Class IRI="#Dynasty"/>
                 <Variable IRI="#t"/>
             </ClassAtom>
             <ObjectPropertyAtom>
                 <ObjectProperty IRI="#hasOwner"/>
                 <Variable IRI="#x"/>
                 <Variable IRI="#t"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isLocateIn"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
             </ObjectPropertyAtom>
         </Body>
         <Head>
