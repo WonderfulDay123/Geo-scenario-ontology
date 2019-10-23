@@ -22,6 +22,11 @@
         <Literal xml:lang="en">Yi Huang; May Yuan</Literal>
     </Annotation>
     <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/institute"/>
+        <Literal>Nanjing Normal University
+University of Texas at Dallas</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
         <Literal xml:lang="en">Geographic scenario Ontology</Literal>
     </Annotation>
@@ -915,6 +920,9 @@
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/institute"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
