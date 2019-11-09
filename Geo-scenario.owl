@@ -37,13 +37,7 @@ University of Texas at Dallas</Literal>
         <Class IRI="#AdminDivision"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Aggregate"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Alkalinity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Analysis"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Animal"/>
@@ -70,12 +64,6 @@ University of Texas at Dallas</Literal>
         <Class IRI="#Biology"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Buffer"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Calculate"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Capacity"/>
     </Declaration>
     <Declaration>
@@ -86,9 +74,6 @@ University of Texas at Dallas</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="#City"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Clip"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Combustion"/>
@@ -112,9 +97,6 @@ University of Texas at Dallas</Literal>
         <Class IRI="#Develop"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Difference"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Disappear"/>
     </Declaration>
     <Declaration>
@@ -128,12 +110,6 @@ University of Texas at Dallas</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="#Flammability"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Gas"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Geo-Function"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Geo-characterization"/>
@@ -199,9 +175,6 @@ University of Texas at Dallas</Literal>
         <Class IRI="#Intensity"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Intersect"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Interval"/>
     </Declaration>
     <Declaration>
@@ -209,9 +182,6 @@ University of Texas at Dallas</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="#Line"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Liquid"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Manmade_event"/>
@@ -257,9 +227,6 @@ University of Texas at Dallas</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="#Other_event"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Overlay"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Oxidability"/>
@@ -316,9 +283,6 @@ University of Texas at Dallas</Literal>
         <Class IRI="#Relational_information"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Representation"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Rigidty"/>
     </Declaration>
     <Declaration>
@@ -334,9 +298,6 @@ University of Texas at Dallas</Literal>
         <Class IRI="#Saturability"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Search"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Semantic_information"/>
     </Declaration>
     <Declaration>
@@ -344,12 +305,6 @@ University of Texas at Dallas</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="#Soil"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Solid"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Spatial_Analysis"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Spatial_Extent"/>
@@ -364,25 +319,13 @@ University of Texas at Dallas</Literal>
         <Class IRI="#Spring"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#State"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#State-based"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Static_information"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Sum"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Temporal_Analysis"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Temporal_Information"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Terrain_Analysis"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Thing"/>
@@ -395,12 +338,6 @@ University of Texas at Dallas</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="#Transportation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Union"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Unit"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Vegetation"/>
@@ -972,16 +909,8 @@ University of Texas at Dallas</Literal>
         <Class IRI="#Constructed_thing"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Aggregate"/>
-        <Class IRI="#Spatial_Analysis"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Alkalinity"/>
         <Class IRI="#CheAttr"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Analysis"/>
-        <Class IRI="#Geo-Function"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Animal"/>
@@ -1016,14 +945,6 @@ University of Texas at Dallas</Literal>
         <Class IRI="#Thing"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Buffer"/>
-        <Class IRI="#Spatial_Analysis"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Calculate"/>
-        <Class IRI="#Geo-Function"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Capacity"/>
         <Class IRI="#Humanistic"/>
     </SubClassOf>
@@ -1045,10 +966,6 @@ University of Texas at Dallas</Literal>
             <ObjectProperty IRI="#isContainedIn"/>
             <Class IRI="#Province"/>
         </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Clip"/>
-        <Class IRI="#Overlay"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Combustion"/>
@@ -1077,10 +994,6 @@ University of Texas at Dallas</Literal>
     <SubClassOf>
         <Class IRI="#Develop"/>
         <Class IRI="#State-based"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Difference"/>
-        <Class IRI="#Spatial_Analysis"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Disappear"/>
@@ -1115,10 +1028,6 @@ University of Texas at Dallas</Literal>
     <SubClassOf>
         <Class IRI="#Flammability"/>
         <Class IRI="#CheAttr"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Gas"/>
-        <Class IRI="#State"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Geo-scenario"/>
@@ -1204,10 +1113,6 @@ University of Texas at Dallas</Literal>
         <Class IRI="#PhyAttr"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Intersect"/>
-        <Class IRI="#Overlay"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Interval"/>
         <Class IRI="#Temporal_Information"/>
     </SubClassOf>
@@ -1218,10 +1123,6 @@ University of Texas at Dallas</Literal>
     <SubClassOf>
         <Class IRI="#Line"/>
         <Class IRI="#Geometry"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Liquid"/>
-        <Class IRI="#State"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Manmade_event"/>
@@ -1282,10 +1183,6 @@ University of Texas at Dallas</Literal>
     <SubClassOf>
         <Class IRI="#Other_event"/>
         <Class IRI="#Natural_event"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Overlay"/>
-        <Class IRI="#Spatial_Analysis"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Oxidability"/>
@@ -1401,10 +1298,6 @@ University of Texas at Dallas</Literal>
         <Class IRI="#PhyAttr"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Search"/>
-        <Class IRI="#Geo-Function"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Semantic_information"/>
         <Class IRI="#Static_information"/>
     </SubClassOf>
@@ -1415,14 +1308,6 @@ University of Texas at Dallas</Literal>
     <SubClassOf>
         <Class IRI="#Soil"/>
         <Class IRI="#Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Solid"/>
-        <Class IRI="#State"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Spatial_Analysis"/>
-        <Class IRI="#Analysis"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Spatial_Extent"/>
@@ -1441,10 +1326,6 @@ University of Texas at Dallas</Literal>
         <Class IRI="#OtherHydro"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#State"/>
-        <Class IRI="#Representation"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#State-based"/>
         <Class IRI="#Process_information"/>
     </SubClassOf>
@@ -1453,20 +1334,8 @@ University of Texas at Dallas</Literal>
         <Class IRI="#Geo-characterization"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Sum"/>
-        <Class IRI="#Spatial_Analysis"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Temporal_Analysis"/>
-        <Class IRI="#Analysis"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Temporal_Information"/>
         <Class IRI="#Static_information"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Terrain_Analysis"/>
-        <Class IRI="#Analysis"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Thing"/>
@@ -1490,14 +1359,6 @@ University of Texas at Dallas</Literal>
     <SubClassOf>
         <Class IRI="#Transportation"/>
         <Class IRI="#Constructed_thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Union"/>
-        <Class IRI="#Spatial_Analysis"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Unit"/>
-        <Class IRI="#Representation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Vegetation"/>
@@ -1584,22 +1445,6 @@ University of Texas at Dallas</Literal>
         <Class IRI="#Transportation"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Aggregate"/>
-        <Class IRI="#Buffer"/>
-        <Class IRI="#Difference"/>
-        <Class IRI="#Intersect"/>
-        <Class IRI="#Overlay"/>
-        <Class IRI="#Sum"/>
-        <Class IRI="#Union"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Aggregate"/>
-        <Class IRI="#Buffer"/>
-        <Class IRI="#Difference"/>
-        <Class IRI="#Intersect"/>
-        <Class IRI="#Union"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#Animal"/>
         <Class IRI="#Microorganism"/>
         <Class IRI="#Vegetation"/>
@@ -1641,10 +1486,6 @@ University of Texas at Dallas</Literal>
         <Class IRI="#partOfDistrict"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Clip"/>
-        <Class IRI="#Intersect"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#Combustion"/>
         <Class IRI="#Density"/>
         <Class IRI="#Intensity"/>
@@ -1670,11 +1511,6 @@ University of Texas at Dallas</Literal>
         <Class IRI="#Coordinate"/>
         <Class IRI="#Coordinate_System"/>
         <Class IRI="#Spatial_Extent"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Gas"/>
-        <Class IRI="#Liquid"/>
-        <Class IRI="#Solid"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Geological_structure"/>
@@ -1716,15 +1552,6 @@ University of Texas at Dallas</Literal>
     <DisjointClasses>
         <Class IRI="#Meterological_factor"/>
         <Class IRI="#Particle"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Spatial_Analysis"/>
-        <Class IRI="#Temporal_Analysis"/>
-        <Class IRI="#Terrain_Analysis"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#State"/>
-        <Class IRI="#Unit"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#endTime"/>
@@ -1977,10 +1804,6 @@ University of Texas at Dallas</Literal>
     <ClassAssertion>
         <Class IRI="#Geo-scenario"/>
         <NamedIndividual IRI="#Yangzhou"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Unit"/>
-        <NamedIndividual IRI="#Yuan"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#District"/>
@@ -3652,7 +3475,7 @@ University of Texas at Dallas</Literal>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#&apos;example_of_usage&apos;"/>
         <IRI>#Phenomenon</IRI>
-        <Literal xml:lang="en">tourists travelling to coastal cities in the northern hemisphere every summer</Literal>
+        <Literal xml:lang="en">tourists travel to coastal cities in the northern hemisphere every summer</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#label"/>
