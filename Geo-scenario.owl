@@ -64,6 +64,9 @@ University of Texas at Dallas</Literal>
         <Class IRI="#Biology"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Built_thing"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Capacity"/>
     </Declaration>
     <Declaration>
@@ -77,9 +80,6 @@ University of Texas at Dallas</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="#Combustion"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Constructed_thing"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Coordinate"/>
@@ -589,9 +589,6 @@ University of Texas at Dallas</Literal>
         <ObjectProperty IRI="#isOrigniate"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#isPartOf"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#isParticipateIn"/>
     </Declaration>
     <Declaration>
@@ -611,6 +608,9 @@ University of Texas at Dallas</Literal>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#northWestTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#partOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#preDominateBy"/>
@@ -847,9 +847,6 @@ University of Texas at Dallas</Literal>
         <NamedIndividual IRI="#Yangzhou"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Yuan"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Yuhuatai"/>
     </Declaration>
     <Declaration>
@@ -906,7 +903,7 @@ University of Texas at Dallas</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#AdminDivision"/>
-        <Class IRI="#Constructed_thing"/>
+        <Class IRI="#Built_thing"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Alkalinity"/>
@@ -945,6 +942,10 @@ University of Texas at Dallas</Literal>
         <Class IRI="#Thing"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Built_thing"/>
+        <Class IRI="#Thing"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Capacity"/>
         <Class IRI="#Humanistic"/>
     </SubClassOf>
@@ -970,10 +971,6 @@ University of Texas at Dallas</Literal>
     <SubClassOf>
         <Class IRI="#Combustion"/>
         <Class IRI="#PhyAttr"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Constructed_thing"/>
-        <Class IRI="#Thing"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Coordinate"/>
@@ -1102,7 +1099,7 @@ University of Texas at Dallas</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Infrastructure"/>
-        <Class IRI="#Constructed_thing"/>
+        <Class IRI="#Built_thing"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Instant"/>
@@ -1224,7 +1221,7 @@ University of Texas at Dallas</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Pipeline"/>
-        <Class IRI="#Constructed_thing"/>
+        <Class IRI="#Built_thing"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Point"/>
@@ -1244,7 +1241,7 @@ University of Texas at Dallas</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Positioning_Basic"/>
-        <Class IRI="#Constructed_thing"/>
+        <Class IRI="#Built_thing"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Precipitation"/>
@@ -1303,7 +1300,7 @@ University of Texas at Dallas</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SocioEconomy"/>
-        <Class IRI="#Constructed_thing"/>
+        <Class IRI="#Built_thing"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Soil"/>
@@ -1358,7 +1355,7 @@ University of Texas at Dallas</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Transportation"/>
-        <Class IRI="#Constructed_thing"/>
+        <Class IRI="#Built_thing"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Vegetation"/>
@@ -1465,7 +1462,7 @@ University of Texas at Dallas</Literal>
     <DisjointClasses>
         <Class IRI="#Atmosphere"/>
         <Class IRI="#Biology"/>
-        <Class IRI="#Constructed_thing"/>
+        <Class IRI="#Built_thing"/>
         <Class IRI="#Geology"/>
         <Class IRI="#Hydrology"/>
         <Class IRI="#Other"/>
@@ -1842,14 +1839,19 @@ University of Texas at Dallas</Literal>
         <NamedIndividual IRI="#Taizhou"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isContainedIn"/>
+        <NamedIndividual IRI="#Gaochun"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isContainedIn"/>
+        <NamedIndividual IRI="#Gulou"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasOwner"/>
         <NamedIndividual IRI="#Han_Palace"/>
         <NamedIndividual IRI="#Ming_Dynasty"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#histState"/>
-        <NamedIndividual IRI="#Han_Palace"/>
-        <NamedIndividual IRI="#NJPPA"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isLocateIn"/>
@@ -1887,11 +1889,6 @@ University of Texas at Dallas</Literal>
         <NamedIndividual IRI="#Qing_Dynasty"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#histState"/>
-        <NamedIndividual IRI="#JN_Gov_Off"/>
-        <NamedIndividual IRI="#NJPPA"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isLocateIn"/>
         <NamedIndividual IRI="#JN_Gov_Off"/>
         <NamedIndividual IRI="#Nanjing"/>
@@ -1907,11 +1904,6 @@ University of Texas at Dallas</Literal>
         <NamedIndividual IRI="#P.R._China"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#histState"/>
-        <NamedIndividual IRI="#JS_Gov_Off"/>
-        <NamedIndividual IRI="#NJPPA"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isLocateIn"/>
         <NamedIndividual IRI="#JS_Gov_Off"/>
         <NamedIndividual IRI="#Nanjing"/>
@@ -1922,14 +1914,79 @@ University of Texas at Dallas</Literal>
         <NamedIndividual IRI="#Xuanwu"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contain"/>
+        <NamedIndividual IRI="#Jiangsu"/>
+        <NamedIndividual IRI="#Changzhou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contain"/>
+        <NamedIndividual IRI="#Jiangsu"/>
+        <NamedIndividual IRI="#Huaian"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contain"/>
+        <NamedIndividual IRI="#Jiangsu"/>
+        <NamedIndividual IRI="#Lianyungang"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contain"/>
+        <NamedIndividual IRI="#Jiangsu"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contain"/>
+        <NamedIndividual IRI="#Jiangsu"/>
+        <NamedIndividual IRI="#Nantong"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contain"/>
+        <NamedIndividual IRI="#Jiangsu"/>
+        <NamedIndividual IRI="#Suqian"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contain"/>
+        <NamedIndividual IRI="#Jiangsu"/>
+        <NamedIndividual IRI="#Suzhou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contain"/>
+        <NamedIndividual IRI="#Jiangsu"/>
+        <NamedIndividual IRI="#Taizhou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contain"/>
+        <NamedIndividual IRI="#Jiangsu"/>
+        <NamedIndividual IRI="#Wuxi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contain"/>
+        <NamedIndividual IRI="#Jiangsu"/>
+        <NamedIndividual IRI="#Xuzhou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contain"/>
+        <NamedIndividual IRI="#Jiangsu"/>
+        <NamedIndividual IRI="#Yancheng"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contain"/>
+        <NamedIndividual IRI="#Jiangsu"/>
+        <NamedIndividual IRI="#Yangzhou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contain"/>
+        <NamedIndividual IRI="#Jiangsu"/>
+        <NamedIndividual IRI="#Zhenjiang"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isContainedIn"/>
+        <NamedIndividual IRI="#Jianye"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasOwner"/>
         <NamedIndividual IRI="#LJ_Gov_Off"/>
         <NamedIndividual IRI="#Qing_Dynasty"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#histState"/>
-        <NamedIndividual IRI="#LJ_Gov_Off"/>
-        <NamedIndividual IRI="#NJPPA"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isLocateIn"/>
@@ -1945,11 +2002,6 @@ University of Texas at Dallas</Literal>
         <ObjectProperty IRI="#hasOwner"/>
         <NamedIndividual IRI="#LJ_Gov_Palace"/>
         <NamedIndividual IRI="#Qing_Dynasty"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#histState"/>
-        <NamedIndividual IRI="#LJ_Gov_Palace"/>
-        <NamedIndividual IRI="#NJPPA"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isLocateIn"/>
@@ -1982,6 +2034,16 @@ University of Texas at Dallas</Literal>
         <NamedIndividual IRI="#Yancheng"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isContainedIn"/>
+        <NamedIndividual IRI="#Lishui"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isContainedIn"/>
+        <NamedIndividual IRI="#Lvhe"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isRelateTo"/>
         <NamedIndividual IRI="#Ming_Dynasty"/>
         <NamedIndividual IRI="#P.R._China"/>
@@ -1992,6 +2054,56 @@ University of Texas at Dallas</Literal>
         <NamedIndividual IRI="#P.R._China"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#histState"/>
+        <NamedIndividual IRI="#NJPPA"/>
+        <NamedIndividual IRI="#Han_Palace"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#histState"/>
+        <NamedIndividual IRI="#NJPPA"/>
+        <NamedIndividual IRI="#JN_Gov_Off"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#histState"/>
+        <NamedIndividual IRI="#NJPPA"/>
+        <NamedIndividual IRI="#JS_Gov_Off"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#histState"/>
+        <NamedIndividual IRI="#NJPPA"/>
+        <NamedIndividual IRI="#LJ_Gov_Off"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#histState"/>
+        <NamedIndividual IRI="#NJPPA"/>
+        <NamedIndividual IRI="#LJ_Gov_Palace"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#histState"/>
+        <NamedIndividual IRI="#NJPPA"/>
+        <NamedIndividual IRI="#Ntl_Gov_Off"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#histState"/>
+        <NamedIndividual IRI="#NJPPA"/>
+        <NamedIndividual IRI="#Palace_Ruins"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#histState"/>
+        <NamedIndividual IRI="#NJPPA"/>
+        <NamedIndividual IRI="#Pres_Palace"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#histState"/>
+        <NamedIndividual IRI="#NJPPA"/>
+        <NamedIndividual IRI="#Puppet_Gov_Off"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#histState"/>
+        <NamedIndividual IRI="#NJPPA"/>
+        <NamedIndividual IRI="#TW_Palace"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isLocateIn"/>
         <NamedIndividual IRI="#NJPPA"/>
         <NamedIndividual IRI="#Nanjing"/>
@@ -2000,6 +2112,11 @@ University of Texas at Dallas</Literal>
         <ObjectProperty IRI="#isLocateIn"/>
         <NamedIndividual IRI="#NJPPA"/>
         <NamedIndividual IRI="#Xuanwu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#partOf"/>
+        <NamedIndividual IRI="#NJPPA"/>
+        <NamedIndividual IRI="#Jiangsu"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#contain"/>
@@ -2127,11 +2244,6 @@ University of Texas at Dallas</Literal>
         <NamedIndividual IRI="#Republic_of_China"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#histState"/>
-        <NamedIndividual IRI="#Ntl_Gov_Off"/>
-        <NamedIndividual IRI="#NJPPA"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isLocateIn"/>
         <NamedIndividual IRI="#Ntl_Gov_Off"/>
         <NamedIndividual IRI="#Nanjing"/>
@@ -2142,14 +2254,14 @@ University of Texas at Dallas</Literal>
         <NamedIndividual IRI="#Xuanwu"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contain"/>
+        <NamedIndividual IRI="#P.R._China"/>
+        <NamedIndividual IRI="#Jiangsu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasOwner"/>
         <NamedIndividual IRI="#Palace_Ruins"/>
         <NamedIndividual IRI="#Qing_Dynasty"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#histState"/>
-        <NamedIndividual IRI="#Palace_Ruins"/>
-        <NamedIndividual IRI="#NJPPA"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isLocateIn"/>
@@ -2167,11 +2279,6 @@ University of Texas at Dallas</Literal>
         <NamedIndividual IRI="#Republic_of_China"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#histState"/>
-        <NamedIndividual IRI="#Pres_Palace"/>
-        <NamedIndividual IRI="#NJPPA"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isLocateIn"/>
         <NamedIndividual IRI="#Pres_Palace"/>
         <NamedIndividual IRI="#Nanjing"/>
@@ -2182,14 +2289,14 @@ University of Texas at Dallas</Literal>
         <NamedIndividual IRI="#Xuanwu"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isContainedIn"/>
+        <NamedIndividual IRI="#Pukou"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasOwner"/>
         <NamedIndividual IRI="#Puppet_Gov_Off"/>
         <NamedIndividual IRI="#Puppet_Regime"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#histState"/>
-        <NamedIndividual IRI="#Puppet_Gov_Off"/>
-        <NamedIndividual IRI="#NJPPA"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isLocateIn"/>
@@ -2204,6 +2311,26 @@ University of Texas at Dallas</Literal>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isRelateTo"/>
         <NamedIndividual IRI="#Puppet_Regime"/>
+        <NamedIndividual IRI="#P.R._China"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isRelateTo"/>
+        <NamedIndividual IRI="#Qing_Dynasty"/>
+        <NamedIndividual IRI="#P.R._China"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isContainedIn"/>
+        <NamedIndividual IRI="#Qinhuai"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isContainedIn"/>
+        <NamedIndividual IRI="#Qixia"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isRelateTo"/>
+        <NamedIndividual IRI="#Republic_of_China"/>
         <NamedIndividual IRI="#P.R._China"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -2242,11 +2369,6 @@ University of Texas at Dallas</Literal>
         <NamedIndividual IRI="#Taiping_Dynasty"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#histState"/>
-        <NamedIndividual IRI="#TW_Palace"/>
-        <NamedIndividual IRI="#NJPPA"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isLocateIn"/>
         <NamedIndividual IRI="#TW_Palace"/>
         <NamedIndividual IRI="#Nanjing"/>
@@ -2255,6 +2377,11 @@ University of Texas at Dallas</Literal>
         <ObjectProperty IRI="#isLocateIn"/>
         <NamedIndividual IRI="#TW_Palace"/>
         <NamedIndividual IRI="#Xuanwu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isRelateTo"/>
+        <NamedIndividual IRI="#Taiping_Dynasty"/>
+        <NamedIndividual IRI="#P.R._China"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#northEastTo"/>
@@ -2367,6 +2494,11 @@ University of Texas at Dallas</Literal>
         <NamedIndividual IRI="#Yancheng"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isContainedIn"/>
+        <NamedIndividual IRI="#Yuhuatai"/>
+        <NamedIndividual IRI="#Nanjing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#eastTo"/>
         <NamedIndividual IRI="#Zhenjiang"/>
         <NamedIndividual IRI="#Nanjing"/>
@@ -2392,6 +2524,16 @@ University of Texas at Dallas</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">320400</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasGDP"/>
+        <NamedIndividual IRI="#Changzhou"/>
+        <Literal>0.71 tn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPopulation"/>
+        <NamedIndividual IRI="#Changzhou"/>
+        <Literal>4.72 mn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasInteract"/>
         <NamedIndividual IRI="#Han_Palace"/>
         <Literal>Construct</Literal>
@@ -2405,6 +2547,16 @@ University of Texas at Dallas</Literal>
         <DataProperty IRI="#hasCityCode"/>
         <NamedIndividual IRI="#Huaian"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">320800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasGDP"/>
+        <NamedIndividual IRI="#Huaian"/>
+        <Literal>0.36 tn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPopulation"/>
+        <NamedIndividual IRI="#Huaian"/>
+        <Literal>4.93 mn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasInteract"/>
@@ -2452,6 +2604,16 @@ University of Texas at Dallas</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">320700</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasGDP"/>
+        <NamedIndividual IRI="#Lianyungang"/>
+        <Literal>0.28 tn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPopulation"/>
+        <NamedIndividual IRI="#Lianyungang"/>
+        <Literal>4.52 mn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasInteract"/>
         <NamedIndividual IRI="#NJPPA"/>
         <Literal>Renovate</Literal>
@@ -2469,17 +2631,27 @@ University of Texas at Dallas</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasGDP"/>
         <NamedIndividual IRI="#Nanjing"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.28</Literal>
+        <Literal>1.28 tn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasPopulation"/>
         <NamedIndividual IRI="#Nanjing"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">8.43</Literal>
+        <Literal>8.43 mn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasCityCode"/>
         <NamedIndividual IRI="#Nantong"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">320600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasGDP"/>
+        <NamedIndividual IRI="#Nantong"/>
+        <Literal>0.84 tn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPopulation"/>
+        <NamedIndividual IRI="#Nantong"/>
+        <Literal>7.31 mn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasInteract"/>
@@ -2527,9 +2699,29 @@ University of Texas at Dallas</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">321300</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasGDP"/>
+        <NamedIndividual IRI="#Suqian"/>
+        <Literal>0.28 tn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPopulation"/>
+        <NamedIndividual IRI="#Suqian"/>
+        <Literal>4.92 mn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasCityCode"/>
         <NamedIndividual IRI="#Suzhou"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">320500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasGDP"/>
+        <NamedIndividual IRI="#Suzhou"/>
+        <Literal>1.86 tn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPopulation"/>
+        <NamedIndividual IRI="#Suzhou"/>
+        <Literal>10.7 mn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasInteract"/>
@@ -2547,9 +2739,29 @@ University of Texas at Dallas</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">321200</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasGDP"/>
+        <NamedIndividual IRI="#Taizhou"/>
+        <Literal>0.51 tn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPopulation"/>
+        <NamedIndividual IRI="#Taizhou"/>
+        <Literal>4.63 mn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasCityCode"/>
         <NamedIndividual IRI="#Wuxi"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">320200</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasGDP"/>
+        <NamedIndividual IRI="#Wuxi"/>
+        <Literal>1.14 tn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPopulation"/>
+        <NamedIndividual IRI="#Wuxi"/>
+        <Literal>6.57 mn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasCityCode"/>
@@ -2557,9 +2769,29 @@ University of Texas at Dallas</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">320300</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasGDP"/>
+        <NamedIndividual IRI="#Xuzhou"/>
+        <Literal>0.68 tn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPopulation"/>
+        <NamedIndividual IRI="#Xuzhou"/>
+        <Literal>8.80 mn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasCityCode"/>
         <NamedIndividual IRI="#Yancheng"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">320900</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasGDP"/>
+        <NamedIndividual IRI="#Yancheng"/>
+        <Literal>0.55 tn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPopulation"/>
+        <NamedIndividual IRI="#Yancheng"/>
+        <Literal>7.20 mn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasCityCode"/>
@@ -2567,13 +2799,33 @@ University of Texas at Dallas</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">321000</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasGDP"/>
+        <NamedIndividual IRI="#Yangzhou"/>
+        <Literal>0.55 tn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPopulation"/>
+        <NamedIndividual IRI="#Yangzhou"/>
+        <Literal>4.53 mn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasCityCode"/>
         <NamedIndividual IRI="#Zhenjiang"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">321100</Literal>
     </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPopulation"/>
+        <NamedIndividual IRI="#Zhenjiang"/>
+        <Literal>0.41 tn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPopulation"/>
+        <NamedIndividual IRI="#Zhenjiang"/>
+        <Literal>3.20 mn</Literal>
+    </DataPropertyAssertion>
     <EquivalentObjectProperties>
         <ObjectProperty IRI="#isContainedIn"/>
-        <ObjectProperty IRI="#isPartOf"/>
+        <ObjectProperty IRI="#partOf"/>
     </EquivalentObjectProperties>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#Bio_interact"/>
@@ -2840,10 +3092,6 @@ University of Texas at Dallas</Literal>
         <ObjectProperty IRI="#Semantic_Relation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#isPartOf"/>
-        <ObjectProperty IRI="#Semantic_Relation"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#isParticipateIn"/>
         <ObjectProperty IRI="#Semantic_Relation"/>
     </SubObjectPropertyOf>
@@ -2870,6 +3118,10 @@ University of Texas at Dallas</Literal>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#northWestTo"/>
         <ObjectProperty IRI="#Orientation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#partOf"/>
+        <ObjectProperty IRI="#Semantic_Relation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#preDominateBy"/>
@@ -3252,21 +3504,21 @@ University of Texas at Dallas</Literal>
                 <Variable IRI="#x"/>
             </ClassAtom>
             <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isLocateIn"/>
-                <Variable IRI="#x"/>
+                <ObjectProperty IRI="#contain"/>
                 <Variable IRI="#y"/>
+                <Variable IRI="#x"/>
             </ObjectPropertyAtom>
             <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isContainedIn"/>
-                <Variable IRI="#y"/>
+                <ObjectProperty IRI="#contain"/>
                 <Variable IRI="#z"/>
+                <Variable IRI="#y"/>
             </ObjectPropertyAtom>
         </Body>
         <Head>
             <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isLocateIn"/>
-                <Variable IRI="#x"/>
+                <ObjectProperty IRI="#contain"/>
                 <Variable IRI="#z"/>
+                <Variable IRI="#x"/>
             </ObjectPropertyAtom>
         </Head>
     </DLSafeRule>
@@ -3294,9 +3546,9 @@ University of Texas at Dallas</Literal>
                 <Variable IRI="#t"/>
             </ObjectPropertyAtom>
             <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isLocateIn"/>
-                <Variable IRI="#x"/>
+                <ObjectProperty IRI="#contain"/>
                 <Variable IRI="#z"/>
+                <Variable IRI="#x"/>
             </ObjectPropertyAtom>
         </Body>
         <Head>
