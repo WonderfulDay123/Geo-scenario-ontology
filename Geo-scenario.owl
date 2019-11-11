@@ -23,8 +23,7 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/institute"/>
-        <Literal>Nanjing Normal University
-University of Texas at Dallas</Literal>
+        <Literal>the University of Texas at Dallas</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
